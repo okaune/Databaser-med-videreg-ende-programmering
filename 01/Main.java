@@ -18,8 +18,6 @@ class Main {
 	                               arg, //Object[] options,
 	                               arg[0]);//Object initialValue
 			
-			System.out.println(choice);
-			
 			switch (choice) {
 				case 0:
 					String name = showInputDialog("Navn:");
@@ -29,11 +27,10 @@ class Main {
 				case 1:
 					String reserveName = showInputDialog("Navn:");
 					int[] reservedTables = restaurant.findReservedTables(reserveName);
-					String tablesReserved = "Bord resrvert: ";
+					String tablesReserved = "Bord reservert: ";
 					for (int table : reservedTables) {
-						tablesReserved += table + " ";
+						tablesReserved += "\n" + table;
 					}
-					System.out.println(tablesReserved); // For debugging
 					showMessageDialog(null, tablesReserved);
 					break;
 				case 2:

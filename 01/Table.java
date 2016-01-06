@@ -47,11 +47,10 @@ class Table {
 		return false;
 	}
 	
-	public int[] findReservedTables(String reservedName) { // FIXME
+	public int[] findReservedTables(String reservedName) {
 		System.out.println(reservedName);
 		int tablesReserved = 0;
 		for (int i = 0; i < tables.length; i++) {
-			System.out.println(tables[i]);
 			if (reservedName.equals(tables[i])) {
 				tablesReserved++;
 			}
