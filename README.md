@@ -4,9 +4,8 @@ Beskrivende tekst kommer (kanskje)
 
 
 ## Øvinger:
-* [Øving 1](01) (__DP1:__ Repetisjon: Tabeller, konstruktører.
-)
-* [Øving 2](02)
+* [Øving 1](01) (__Øving 1:__ Repetisjon)
+* [Øving 2](02) (__Øving 2:__ Tabeller og ArrayList)
 * [Øving 3](03)
 * [Øving 4](04)
 * [Øving 5](05)
