@@ -6,7 +6,7 @@ Beskrivende tekst kommer (kanskje)
 ## Øvinger:
 * [Øving 1](01) (__Øving 1:__ Repetisjon)
 * [Øving 2](02) (__Øving 2:__ Tabeller og ArrayList)
-* [Øving 3](03)
+* [Øving 3](03) (__Øving 3:__ Aggregeringer)
 * [Øving 4](04)
 * [Øving 5](05)
 * [Øving 6](06)
