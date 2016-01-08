@@ -67,7 +67,8 @@ class Rom {
 			System.out.println("Rom: Test 2 vellykket.");
 		}
 		
-		if (r.equals(1)) {
+		Rom r2 = new Rom(2, 9);
+		if (r.equals(1) && r2.equals(2)) {
 			System.out.println("Rom: Test 3 vellykket.");
 		}
 		

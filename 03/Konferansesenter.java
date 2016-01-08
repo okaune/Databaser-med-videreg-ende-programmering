@@ -9,10 +9,10 @@ class Konferansesenter {
 	
 	ArrayList<Rom> rom = new ArrayList<Rom>();
 	
-	public boolean reserverRom(Tidspunkt fraTid, Tidspunkt tilTid, int antPers, String navn, String tlf) {
+	public boolean reserverRom(Tidspunkt fraTid, Tidspunkt tilTid, int antPers, Kunde kunde) {
 		for (Rom r : rom) {
 			if (r.getAntPers() >= antPers) {
-				if(r.reserverRom(fraTid, tilTid, new Kunde(navn, tlf))) {
+				if(r.reserverRom(fraTid, tilTid, kunde)) {
 					return true;
 				}
 			}
