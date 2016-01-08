@@ -57,7 +57,7 @@ class Main {
 					showMessageDialog(null, "Rommet ble ikke reservert.");
 					i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 				}
-			} catch (Exception e) {
+			} catch (Exception e) { //FIXME Bør egentlig sjekke spesifikke exceptions her, da mer enn å skrive inn integers kan gå galt.
 				showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 				i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 			}
