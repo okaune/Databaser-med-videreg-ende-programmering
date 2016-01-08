@@ -33,20 +33,14 @@ class Rom {
 		return true;
 	}
 	
-	public boolean equals(int romNr) { 	// FIXME - burde bruke standard Object obj,
-										// men dette fungerer for nå
-		if (romNr == this.romNr) {
-			return true;
-		}
-		return false;
-	}
-	
 	public String toString() {
 		String output = "Romnummer: " + romNr + "\n" +
-						"Antall personer: " + antPers + "\n" +
-						"Reservasjoner:\n";
-		for (Reservasjon reservasjon : reservasjoner) {
-			output += reservasjon + "\n";
+						"Antall personer: " + antPers + "\n";
+		if (reservasjoner.size() > 0) {
+			output += "Reservasjoner:\n";
+			for (Reservasjon reservasjon : reservasjoner) {
+				output += reservasjon + "\n";
+			}
 		}
 		return output;
 	}

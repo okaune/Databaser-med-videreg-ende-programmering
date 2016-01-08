@@ -24,7 +24,7 @@ class Konferansesenter {
 	public boolean registrerRom(int romNr, int storrelse) {
 		// Sjekk om romNr eksisterer fra før, ellers registrer rom
 		for (Rom r : rom) {
-			if (r.equals(romNr)) {
+			if (r.getRomNr() == romNr) {
 				return false;
 			}
 		}
@@ -39,10 +39,7 @@ class Konferansesenter {
 	
 	public Rom finnRomIndex(int index) {
 		// Returner rom med riktig index
-		if (rom.get(index) != null) {
-			return rom.get(index);
-		}
-		return null;
+		return rom.get(index);
 	}
 	
 	public Rom finnRomNr(int romNr) {
