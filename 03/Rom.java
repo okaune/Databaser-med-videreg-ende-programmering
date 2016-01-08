@@ -6,9 +6,9 @@
 import java.util.*;
 
 class Rom {
-	int romNr;
-	int antPers;
-	ArrayList<Reservasjon> reservasjoner = new ArrayList<Reservasjon>();
+	private int romNr;
+	private int antPers;
+	private ArrayList<Reservasjon> reservasjoner = new ArrayList<Reservasjon>();
 	
 	public Rom(int romNr, int antPers) {
 		this.romNr = romNr;

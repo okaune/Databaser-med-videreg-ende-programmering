@@ -7,7 +7,7 @@ import java.util.*;
 
 class Konferansesenter {
 	
-	ArrayList<Rom> rom = new ArrayList<Rom>();
+	private ArrayList<Rom> rom = new ArrayList<Rom>();
 	
 	public boolean reserverRom(Tidspunkt fraTid, Tidspunkt tilTid, int antPers, Kunde kunde) {
 		for (Rom r : rom) {
