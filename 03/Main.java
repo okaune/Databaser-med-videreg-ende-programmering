@@ -15,6 +15,7 @@ class Main {
 		try {
 			antRom = Integer.parseInt(showInputDialog("Hvor mange rom vil du registrere?"));
 		} catch (Exception e) {
+			System.out.println("Line 18: " + e);
 			showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 		}
 	
@@ -29,6 +30,7 @@ class Main {
 					i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 				}
 			} catch (Exception e) {
+				System.out.println("Line 33: " + e);
 				showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 				i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 			}
@@ -39,6 +41,7 @@ class Main {
 			try {
 				antReservasjoner = Integer.parseInt(showInputDialog("Hvor mange reservasjoner vil du gjøre?"));
 			} catch (Exception e) {
+				System.out.println("Line 44: " + e);
 				showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 			}
 		}
@@ -58,6 +61,7 @@ class Main {
 					i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 				}
 			} catch (Exception e) { //FIXME Bør egentlig sjekke spesifikke exceptions her, da mer enn å skrive inn integers kan gå galt.
+				System.out.println("Line 64: " + e);
 				showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 				i--; //FIXME Hacky løsning for å loope gjennom en ekstra gang. Bør endres til while loop, men fingerer greit for denne oppgaven.
 			}
@@ -77,6 +81,7 @@ class Main {
 						showMessageDialog(null, "Det finnes ikke no rom med romnummer " + romNr);
 					}
 				} catch (Exception e) {
+					System.out.println("Line 84: " + e);
 					showMessageDialog(null, "Kan ikke skrive inn annet enn tall.");
 				}
 			} while (!gyldigRomNr);
