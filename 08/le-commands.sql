@@ -46,7 +46,10 @@ SELECT forlag_id FROM forlag WHERE forlag_id NOT IN (
 SELECT * FROM forfatter WHERE fode_aar = 1948;
 
 -- Oppgave d --
-SELECT forlag_navn, adresse FROM bok JOIN forlag ON (bok.forlag_id = forlag.forlag_id) WHERE tittel = 'Generation X'; -- Her hadde det også gått ann å bruke natural join --
+SELECT forlag_navn, adresse FROM bok 
+	JOIN forlag ON (bok.forlag_id = forlag.forlag_id) 
+	WHERE tittel = 'Generation X'; 
+-- Her hadde det også gått ann å bruke natural join --
 
 -- Oppgave e --
 SELECT bok.tittel FROM bok 
