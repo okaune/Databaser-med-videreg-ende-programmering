@@ -1,0 +1,52 @@
+Borettslag: Navn, Adresse, Antall Hus og/eller blokker, etableringsår
+
+Medlem: medlemsnr, leilighetsnr
+
+Hus: antall etasjer, antall leiligheter
+
+Leilighet: antall rom, areal, etasje, nummer
+
+a)
+	Borettslag(borettslag_navn, adresse, år) 
+	// antall bygninger kan utregnes fra Bygninger
+
+	Bygning(adresse, etasjer) 
+	// antall leil. kan utregnes fra Leilighet
+
+	Leilighet(leilighet_nr, etasje, areal, rom)
+
+	Medlem(medlemsnummer)
+
+b)
+	Borettslag:
+	Kandidatnøkler er navn og adresse, begge fungerer greit men velger å gå for navn som PK.
+
+	Bygning: 
+	Kandidatnøkkel er adresse, men det står ingenting om det er interne/eksterne adresser som blir brukt.
+	Valget faller her på å lage en egen primærnøkkel bygning_id
+
+	Leilighet:
+	Alle attributene her vil ikke nødvendigvis gi en unik referanse til en leilighet, 
+	kobling av leilighet_nr og bygning_id vil være mer sikkert.
+
+	Medlem:
+	Medlemsnummer er kandidatnøkkel, og det fungerer greit dersom nummer er felles for alle borettslag.
+	Da det står i teksten at BB har medlemsregister over alle andelseiere er det nok greit.
+
+	Borettslag(borettslag_navn(PK), adresse, år)
+	Bygning(bygning_id(PK), adresse, etasjer)
+	Leilighet(leilighet_nr(PK), bygning_id(PK), etasje, areal, rom)
+	Medlem(medlemsnummer(PK))
+
+c)
+	Borettslag er grei.
+	Bygning trenger kobling til borettslag: borettslag_navn*
+	Leilighet trenger kobling til Bygning: bygning_id*
+	Medlem trenger kobling til Leilighet: leilighet_nr* og bygning_id*
+
+	Ser at det er lettere å ha en egen ID for leiligheter.
+	
+	Borettslag(borettslag_navn(PK), adresse, år)
+	Bygning(bygning_id(PK), borettslag_navn*, adresse, etasjer)
+	Leilighet(leilighet_id(PK), bygning_id*, leilighet_nr, etasje, areal, rom)
+	Medlem(medlemsnummer(PK), leilighet_id*)
