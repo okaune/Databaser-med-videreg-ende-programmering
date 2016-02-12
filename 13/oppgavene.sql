@@ -3,7 +3,7 @@ SELECT * FROM borettslag WHERE etabl_aar BETWEEN 1975 AND 1985;
 -- Skriv ut en liste over andelseiere. Listen skal ha linjer som ser slik ut (tekster i kursiv er data fra databasen): 
 -- "fornavn etternavn, ansiennitet: ansiennitet år".
 -- Listen skal være sortert på ansiennitet, de med lengst ansiennitet øverst.
-SELECT fornavn, etternavn, ansiennitet FROM andelseier ORDER BY ansiennitet DESC;
+SELECT fornavn, etternavn, ansiennitet FROM andelseier ORDER BY ansiennitet DESC;  -- Her spør de egentlig om string combining, men man vil aldri be om dette i et vanlig system.
 -- I hvilket år ble det eldste borettslaget etablert?
 SELECT MIN(etabl_aar) AS "Første etablerte borettslag" FROM borettslag;
 -- Finn adressene til alle bygninger som inneholder leiligheter med minst tre rom.
