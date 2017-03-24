@@ -1,0 +1,72 @@
+Oppgave 1
+
+a)
+T1 - T2 - T3
+beløp = 0
+beløp = 4 (T1)
+beløp = 12 (T2)
+beløp = 2 (T3)
+
+T1 - T3 - T2
+beløp = 0
+beløp = 4 (T1)
+beløp = 2 (T3)
+beløp = 6 (T2)
+
+T2 - T1 - T3
+beløp = 0
+beløp = 0 (T2)
+beløp = 4 (T1)
+beløp = 2 (T3)
+
+T2 - T3 - T1
+beløp = 0
+beløp = 0 (T2)
+beløp = 2 (T3)
+beløp = 6 (T1)
+
+T3 - T1 - T2
+beløp = 0
+beløp = 2 (T3)
+beløp = 6 (T1)
+beløp = 18 (T2)
+
+T3 - T2 - T1
+beløp = 0
+beløp = 2 (T3)
+beløp = 6 (T2)
+beløp = 10 (T1)
+
+b)
+S1 - S2 - U1 - S3 - U2 - U3
+beløp = 0
+variabel1 = 4 (S1)
+variabel2 = 0 (S2)
+beløp = 4 (U1)
+variabel3 = 2 (S3)
+beløp = 0 (U2)
+beløp = 3 (U3)
+
+S3 - S1 - U3 - S2 - U1 - U2
+beløp = 0
+variabel3 = 2 (S3)
+variabel1 = 4 (S1)
+beløp = 2 (U3)
+variabel2 = 6 (S2)
+beløp = 4 (U1)
+beløp = 6 (U2)
+
+c)
+S1-S3-U1-U3-S2-U2 vil være seriell fordi T3 vil alltid overskrive tidligere verdier, og operasjonene etter sjer i en rekkefølge som gjør at resultatet blir en av mulighetene i a. De sjer som en helhet.
+
+d)
+I c vil ikke U1 kunne skrive til beløp for S3 har fortsatt en delt lås på beløp. Det vil derfor ikke være mulig å utføre operasjonene i denne rekkefølgen. Alle vil kunne lese samtdidig, men fordi ingen låser oppheves før slutten av transaksjonen, må en hel transaksjon utføres før en annen for å sikre at det er mulig å skrive til dataene.
+
+
+Oppgave 2
+
+a) Begge tabellen skal inneholde verdien 0, men i vårt tilfelle fikk a verdien 0 og b verdien 1 selv med autocommit satt til 0 og isolasjonsnivå satt til serialization.
+
+b) For persnr = 20 ender vi opp med fornavn = 'Anne' og etternavn = 'Aas'
+
+c) update setning (4) endte i deadlock. Transaksjon A fikk oppdatert databasen, transaksjon B fikk ikke oppdatert. Resultat: 20, Anne Ås
