@@ -20,5 +20,5 @@
 * [Øving 16](16) (__Øving 16:__ SQL 2)
 * [Øving 17](17) (__Øving 17:__ Arv og polymorfi 3)
 * [Øving 18](18) (__Øving 18:__ Flerbrukerproblematikk)
-* [Øving 19](19)
-* [Øving 20](20)
+* ~~[Øving 19](19)~~
+* ~~[Øving 20](20)~~
