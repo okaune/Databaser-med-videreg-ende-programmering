@@ -1,6 +1,4 @@
-# Databaser med videregående Programmering  (Java)
-
-Beskrivende tekst kommer (kanskje)
+# TDAT1005: Databaser med videregående programmering  (Java)
 
 
 ## Øvinger:
